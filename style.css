@@ -10,4 +10,10 @@
 :root {
   font-size: 62.5%;
   font-family: 'Mulish', sans-serif;
+
+  --hue: 244;
+  --color-1st: hsl(var(--hue), 38%, 28%);
+  --color-2nd: #FFFFFF;
+  --color-3rd: hsl(var(--hue) + 76, 69%, 42%);
 }
+
