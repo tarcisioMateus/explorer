@@ -20,11 +20,13 @@
 
       <section id="hero">
         <img src="./assets/hero.png" alt="a colorful drawing of an astronaut in space">
-        <h1>Explore without limits</h1>
-        <p>Because learning is continuous</p>
-        <button>
-          <img src="./assets/arrowDown.svg" alt="a pink arrow pointing downwards">
-        </button>
+        <header>
+          <h1>Explore without limits</h1>
+          <p>Because learning is continuous</p>
+          <button>
+            <img src="./assets/arrowDown.svg" alt="a pink arrow pointing downwards">
+          </button>
+        </header>
       </section>
 
       <section class="articles">
@@ -57,22 +59,22 @@
         <fieldset>
           <legend>Entre em contato</legend>
 
-          <div class="input-wrapper">
-            <label for="Name">Name</label>
+          <div class="input-wrapper" id="name">
+            <label for="Name" class="sr-only">Name</label>
             <input type="text" id="Name" name="Name" placeholder="Name">
           </div>
 
-          <div class="input-wrapper">
-            <label for="Email">Email</label>
+          <div class="input-wrapper" id="email">
+            <label for="Email" class="sr-only">Email</label>
             <input type="email" name="Email" id="Email" placeholder="Email">
           </div>
 
-          <div class="input-wrapper">
-            <label for="message">Type your message here...</label>
+          <div class="textarea-wrapper">
+            <label for="message" class="sr-only">Type your message here...</label>
             <textarea name="message" id="message" placeholder="Type your message here..."></textarea>
           </div>
 
-          <input type="submit" value="Send Message">
+          <button>Send Message</button>
         </fieldset>
       </form>
 

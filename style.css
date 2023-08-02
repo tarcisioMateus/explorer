@@ -7,13 +7,175 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+button {
+  transition: all 500ms ease-in-out 200ms;
+}
+button:hover,
+button:focus {
+  background-color: var(--color-2nd);
+  color: var(--color-1st);
+  border: 2px solid var(--color-1st);
+}
+
 :root {
   font-size: 62.5%;
   font-family: 'Mulish', sans-serif;
 
-  --hue: 244;
-  --color-1st: hsl(var(--hue), 38%, 28%);
+  --color-1st: #302c63;
   --color-2nd: #FFFFFF;
-  --color-3rd: hsl(var(--hue) + 76, 69%, 42%);
+  --color-3rd: #b52184;
 }
 
+h1, h2, h3, fieldset legend {
+  color: var(--color-3rd);
+  font-weight: 900;
+  font-size: 3.2rem;
+}
+
+p, 
+input::placeholder, input,
+textarea::placeholder, textarea {
+  color: var(--color-1st);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+textarea::placeholder {
+  line-height: 140%;
+}
+
+
+
+body {
+  background-color: var(--color-2nd);
+  display: grid;
+}
+
+main #hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#hero h1 {
+ padding-top: 1.6rem;
+}
+#hero p {
+  font-size: 2rem;
+  padding-top: .5rem;
+}
+#hero button {
+  border: none;
+  margin-top: 3.6rem;
+  margin-bottom: 9rem;
+}
+
+
+
+main .articles {
+  background-color: var(--color-1st);
+  padding: 5.2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+article {
+  background-color: var(--color-2nd);
+  padding: 2.6rem;
+  padding-right: 6rem;
+  border-radius: 2rem;
+  width: 35.2rem;
+}
+article h3 {
+  padding-bottom: 2rem;
+}
+
+
+
+form {
+  padding: 7.8rem 4rem;
+  min-height: 100vh;
+}
+fieldset {
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+fieldset legend {
+  padding-bottom: 4.2rem;
+}
+.input-wrapper,
+.textarea-wrapper {
+  border: 2px solid var(--color-1st);
+  border-radius: 1.6rem;
+}
+.textarea-wrapper {
+  height: 12.6rem;
+}
+.input-wrapper:focus-within, 
+.textarea-wrapper:focus-within {
+  outline: 2px solid var(--color-3rd);
+  border-color: var(--color-2nd);
+}
+
+#name, #email {
+  background-repeat: no-repeat;
+  background-position: 1.4rem center;
+}
+#name {
+  background-image: url(./assets/user.svg);
+}
+#email {
+  background-image: url(./assets/a.svg);
+
+}
+
+input, textarea {
+  border: 0;
+  background-color: transparent;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  padding: 1.6rem 5rem;
+}
+textarea {
+  resize: none;
+  padding: 1.2rem 1.6rem 1.6rem;
+}
+
+form button {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  color: var(--color-2nd);
+
+  background-color: var(--color-1st);
+  border: 0;
+  border-radius: 1.6rem;
+  padding: 1rem 1.6rem;
+  width: max-content;
+}
+
+
+
+footer {
+  background-color: var(--color-1st);
+
+  font-size: 2rem;
+  color: var(--color-2nd);
+  text-align: center;
+  padding-block: 1.6rem;
+}
