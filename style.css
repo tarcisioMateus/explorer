@@ -61,6 +61,8 @@ body {
   display: grid;
 }
 
+
+
 main #hero {
   min-height: 100vh;
   display: flex;
@@ -79,6 +81,7 @@ main #hero {
   border: none;
   margin-top: 3.6rem;
   margin-bottom: 9rem;
+  background-color: transparent;
 }
 
 
@@ -178,4 +181,30 @@ footer {
   color: var(--color-2nd);
   text-align: center;
   padding-block: 1.6rem;
+}
+
+
+
+@media (min-width: 750px) {
+  main #hero {
+    flex-direction: row-reverse;
+    align-content: top;
+    position: sticky;
+    min-height: min-content;
+  }
+  #hero img {
+    flex: 1;
+    padding-bottom: clamp(3rem, 10vh, 10rem);
+  }
+  #hero header {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: clamp(3rem, 5vw, 10rem);
+    text-align: left;
+  }
+  #hero button { 
+    margin-bottom: 0rem;
+  }
 }
