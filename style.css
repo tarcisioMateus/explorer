@@ -70,6 +70,9 @@ main #hero {
   align-items: center;
   text-align: center;
 }
+#hero > img {
+  flex: 1;
+}
 #hero h1 {
  padding-top: 1.6rem;
 }
@@ -107,12 +110,9 @@ article h3 {
 
 
 
-form {
-  padding: 7.8rem 4rem;
-  min-height: 100vh;
-}
 fieldset {
   border: 0;
+  margin: 7.8rem 4rem;
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
@@ -188,23 +188,52 @@ footer {
 @media (min-width: 750px) {
   main #hero {
     flex-direction: row-reverse;
-    align-content: top;
-    position: sticky;
+    justify-content: space-between;
     min-height: min-content;
   }
-  #hero img {
-    flex: 1;
+  #hero > img {
+    align-self: flex-start;
     padding-bottom: clamp(3rem, 10vh, 10rem);
   }
   #hero header {
+    align-self: flex-end;
     display: flex;
-    height: 100%;
     flex-direction: column;
-    justify-content: space-around;
-    padding-left: clamp(3rem, 5vw, 10rem);
+    align-items: flex-start;
     text-align: left;
+    gap: clamp(1rem, 5vh, 6rem);
+    padding-left: clamp(3rem, 10vh, 10rem);
+    padding-bottom: clamp(3rem, 10vh, 10rem);
   }
-  #hero button { 
-    margin-bottom: 0rem;
+  #hero h1 {
+    font-size: clamp(3.2rem, calc(5vw + .5rem), 5.8rem) ;
+  }
+  #hero p {
+    font-size: 3.2rem;
+  }
+  #hero button {
+    margin-bottom: 0;
+  }
+
+
+  main .articles {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  form {
+    display: flex;
+  }
+  form fieldset {
+    width: 50%;
+    margin: 7.8rem clamp(3rem, 10vh, 10rem);
+  }
+  form::after  {
+    content: '';
+    height: inherit;
+    width: 50%;
+    display: block;
+
+    background-image: url(./assets/stars.png);
   }
 }
